@@ -1,0 +1,2 @@
+username,password,website_name,login_url,logout_url,check_url,element_to_check
+Example,PaSsW0Rd,Github,https://example.org/takelogin.php,https://example.org/logout.php,https://example.org/check.php,Example
