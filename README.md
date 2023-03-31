@@ -22,17 +22,17 @@ The auto_login.sh script logs into multiple websites automatically by reading we
 4. Upload the modified script and data file to your Synology NAS.
 
 5. Set up a scheduled task on your Synology NAS device to run the script periodically. In Task Settings -> Run Command, add the path to the script. For example:
-```
-Bash /volume1/homes/user/auto_login.sh
-```
-For more information on how to create scheduled tasks, refer to the [official Synology documentation](https://www.synology.com/en-global/knowledgebase/DSM/help/DSM/AdminCenter/system_taskscheduler).
+    ```
+    Bash /volume1/homes/user/auto_login.sh
+    ```
+    For more information on how to create scheduled tasks, refer to the [official Synology documentation](https://www.synology.com/en-global/knowledgebase/DSM/help/DSM/AdminCenter/system_taskscheduler).
 
 ## Usage
 
 - The `login_data.txt` file should contain the login information for each website, with one website per line. The format of each line should be:
-```
-username,password,website_name,login_url,logout_url,check_url,element_to_check
-```
+  ```
+  username,password,website_name,login_url,logout_url,check_url,element_to_check
+  ```
 - The `login_url` is not the same as the login webpage address, but rather the address where the POST request should be sent to. You can usually find it in the webpage source code.
 
 - When the `logout_url` is "null" or empty, the program will not attempt to log in again if it is already logged in.
